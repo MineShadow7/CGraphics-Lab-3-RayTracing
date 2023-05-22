@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//TODO: Доделать лабу.
+
 namespace Lab_work_3
 {
     public partial class Form1 : Form
