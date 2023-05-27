@@ -99,6 +99,7 @@ SRay GenerateRay ( SCamera uCamera )
 
 void initializeDefaultScene (out STriangle triangles[12], out SSphere spheres[2])
 {
+//Room_Create_Controll
     triangles[0].v1 = vec3(-5.0,-5.0,-8.0); 
 	triangles[0].v2 = vec3(-5.0, 5.0, 5.0); 
 	triangles[0].v3 = vec3(-5.0, 5.0,-8.0); 
@@ -159,10 +160,12 @@ void initializeDefaultScene (out STriangle triangles[12], out SSphere spheres[2]
 	triangles[11].v3 = vec3(-5.0, -5.0, -8.0); 
 	triangles[11].MaterialIdx = 5;
 	
+ //Sphere_Small_Controll
 	spheres[0].Center = vec3(2.0,0.0,2.0);  
 	spheres[0].Radius = 0.3;  
 	spheres[0].MaterialIdx = 6; 
  
+ //Sphere_Big_Controll
     spheres[1].Center = vec3(-2.0,-1.0,1.0);  
 	spheres[1].Radius = 1.3;  
 	spheres[1].MaterialIdx = 6;
@@ -233,6 +236,7 @@ void initializeDefaultLightMaterials(out SLight light, out SMaterial materials[8
 {
     light.Position = vec3(0.0, 2.0, -4.0f); 
  
+//Material_Controll
     vec4 lightCoefs = vec4(0.4,0.9,0.0,512.0);    
 	materials[0].Color = vec3(0.0, 1.0, 0.0);   
 	materials[0].LightCoeffs = vec4(lightCoefs);

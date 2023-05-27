@@ -79,7 +79,6 @@ namespace Lab_work_3
             GL.UseProgram(BasicProgramID);
             SetUniformVec3("cube_color", CubeColor);
             SetUniformVec3("camera_position", CameraPosition);
-            // Quad
             GL.Color3(Color.White);
             GL.Begin(PrimitiveType.Quads);
 
@@ -107,8 +106,50 @@ namespace Lab_work_3
 
         private void glControl1_Load(object sender, EventArgs e)
         {
+            CubeColor.X = 255;
+            CubeColor.Y = 255;
+            CubeColor.Z = 255;
+            CameraPosition.X = 1;
+            CameraPosition.Y = 1;
+            CameraPosition.Z = 1;
             Init();
             InitShaders();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            CubeColor.X = trackBar1.Value / 255.0f;
+            glControl1.Invalidate();
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            CubeColor.Y = trackBar2.Value / 255.0f;
+            glControl1.Invalidate();
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            CubeColor.Z = trackBar3.Value / 255.0f;
+            glControl1.Invalidate();
+        }
+
+        private void trackBar4_Scroll(object sender, EventArgs e)
+        {
+            CameraPosition.X = trackBar4.Value;
+            glControl1.Invalidate();
+        }
+
+        private void trackBar5_Scroll(object sender, EventArgs e)
+        {
+            CameraPosition.Y = trackBar5.Value;
+            glControl1.Invalidate();
+        }
+
+        private void trackBar6_Scroll(object sender, EventArgs e)
+        {
+            CameraPosition.Z = trackBar6.Value;
+            glControl1.Invalidate();
         }
     }
 }

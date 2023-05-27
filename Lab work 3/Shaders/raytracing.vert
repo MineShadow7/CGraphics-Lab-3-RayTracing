@@ -1,8 +1,10 @@
 #version 430
 
-out vec4 FragColor;
-in vec3 glPosition;
-
-void main(void){
-    FragColor = vec4( abs(glPosition.xy), 0, 1.0);
+in vec3 vPosition;
+// out vec3 origin, direction;
+out vec3 glPosition;
+void main ( void )
+{
+   gl_Position = vec4(vPosition, 1.0);
+   glPosition = vPosition;
 }
